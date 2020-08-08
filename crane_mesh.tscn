@@ -1,0 +1,642 @@
+[gd_scene load_steps=99 format=2]
+
+[ext_resource path="res://models/ID165.mesh" type="ArrayMesh" id=1]
+[ext_resource path="res://models/ID357.mesh" type="ArrayMesh" id=2]
+[ext_resource path="res://models/ID175.mesh" type="ArrayMesh" id=3]
+[ext_resource path="res://models/ID54.mesh" type="ArrayMesh" id=4]
+[ext_resource path="res://models/ID64.mesh" type="ArrayMesh" id=5]
+[ext_resource path="res://models/ID881.mesh" type="ArrayMesh" id=6]
+[ext_resource path="res://models/ID221.mesh" type="ArrayMesh" id=7]
+[ext_resource path="res://models/ID1026.mesh" type="ArrayMesh" id=8]
+[ext_resource path="res://models/ID384.mesh" type="ArrayMesh" id=9]
+[ext_resource path="res://models/ID1036.mesh" type="ArrayMesh" id=10]
+[ext_resource path="res://models/ID155.mesh" type="ArrayMesh" id=11]
+[ext_resource path="res://models/ID211.mesh" type="ArrayMesh" id=12]
+[ext_resource path="res://models/ID92.mesh" type="ArrayMesh" id=13]
+[ext_resource path="res://models/ID103.mesh" type="ArrayMesh" id=14]
+[ext_resource path="res://models/ID75.mesh" type="ArrayMesh" id=15]
+[ext_resource path="res://models/ID44.mesh" type="ArrayMesh" id=16]
+[ext_resource path="res://models/ID125.mesh" type="ArrayMesh" id=17]
+[ext_resource path="res://models/ID18.mesh" type="ArrayMesh" id=18]
+[ext_resource path="res://models/ID534.mesh" type="ArrayMesh" id=19]
+[ext_resource path="res://models/ID986.mesh" type="ArrayMesh" id=20]
+[ext_resource path="res://models/ID135.mesh" type="ArrayMesh" id=21]
+[ext_resource path="res://models/ID850.mesh" type="ArrayMesh" id=22]
+[ext_resource path="res://models/ID145.mesh" type="ArrayMesh" id=23]
+[ext_resource path="res://models/ID764.mesh" type="ArrayMesh" id=24]
+[ext_resource path="res://models/ID654.mesh" type="ArrayMesh" id=25]
+[ext_resource path="res://models/ID584.mesh" type="ArrayMesh" id=26]
+[ext_resource path="res://models/ID644.mesh" type="ArrayMesh" id=27]
+[ext_resource path="res://models/ID684.mesh" type="ArrayMesh" id=28]
+[ext_resource path="res://models/ID514.mesh" type="ArrayMesh" id=29]
+[ext_resource path="res://models/ID185.mesh" type="ArrayMesh" id=30]
+[ext_resource path="res://models/ID269.mesh" type="ArrayMesh" id=31]
+[ext_resource path="res://models/ID860.mesh" type="ArrayMesh" id=32]
+[ext_resource path="res://models/ID231.mesh" type="ArrayMesh" id=33]
+[ext_resource path="res://models/ID574.mesh" type="ArrayMesh" id=34]
+[ext_resource path="res://models/ID484.mesh" type="ArrayMesh" id=35]
+[ext_resource path="res://models/ID1058.mesh" type="ArrayMesh" id=36]
+[ext_resource path="res://models/ID714.mesh" type="ArrayMesh" id=37]
+[ext_resource path="res://models/ID4.mesh" type="ArrayMesh" id=38]
+[ext_resource path="res://models/ID1050.mesh" type="ArrayMesh" id=39]
+[ext_resource path="res://models/ID279.mesh" type="ArrayMesh" id=40]
+[ext_resource path="res://models/ID966.mesh" type="ArrayMesh" id=41]
+[ext_resource path="res://models/ID564.mesh" type="ArrayMesh" id=42]
+[ext_resource path="res://models/ID785.mesh" type="ArrayMesh" id=43]
+[ext_resource path="res://models/ID624.mesh" type="ArrayMesh" id=44]
+[ext_resource path="res://models/ID242.mesh" type="ArrayMesh" id=45]
+[ext_resource path="res://models/ID431.mesh" type="ArrayMesh" id=46]
+[ext_resource path="res://models/ID374.mesh" type="ArrayMesh" id=47]
+[ext_resource path="res://models/ID594.mesh" type="ArrayMesh" id=48]
+[ext_resource path="res://models/ID307.mesh" type="ArrayMesh" id=49]
+[ext_resource path="res://models/ID394.mesh" type="ArrayMesh" id=50]
+[ext_resource path="res://models/ID906.mesh" type="ArrayMesh" id=51]
+[ext_resource path="res://models/ID554.mesh" type="ArrayMesh" id=52]
+[ext_resource path="res://models/ID504.mesh" type="ArrayMesh" id=53]
+[ext_resource path="res://models/ID774.mesh" type="ArrayMesh" id=54]
+[ext_resource path="res://models/ID1062.mesh" type="ArrayMesh" id=55]
+[ext_resource path="res://models/ID634.mesh" type="ArrayMesh" id=56]
+[ext_resource path="res://models/ID916.mesh" type="ArrayMesh" id=57]
+[ext_resource path="res://models/ID474.mesh" type="ArrayMesh" id=58]
+[ext_resource path="res://models/ID290.mesh" type="ArrayMesh" id=59]
+[ext_resource path="res://models/ID405.mesh" type="ArrayMesh" id=60]
+[ext_resource path="res://models/ID1054.mesh" type="ArrayMesh" id=61]
+[ext_resource path="res://models/ID27.mesh" type="ArrayMesh" id=62]
+[ext_resource path="res://models/ID1046.mesh" type="ArrayMesh" id=63]
+[ext_resource path="res://models/ID604.mesh" type="ArrayMesh" id=64]
+[ext_resource path="res://models/ID339.mesh" type="ArrayMesh" id=65]
+[ext_resource path="res://models/ID674.mesh" type="ArrayMesh" id=66]
+[ext_resource path="res://models/ID996.mesh" type="ArrayMesh" id=67]
+[ext_resource path="res://models/ID744.mesh" type="ArrayMesh" id=68]
+[ext_resource path="res://models/ID830.mesh" type="ArrayMesh" id=69]
+[ext_resource path="res://models/ID936.mesh" type="ArrayMesh" id=70]
+[ext_resource path="res://models/ID840.mesh" type="ArrayMesh" id=71]
+[ext_resource path="res://models/ID802.mesh" type="ArrayMesh" id=72]
+[ext_resource path="res://models/ID524.mesh" type="ArrayMesh" id=73]
+[ext_resource path="res://models/ID318.mesh" type="ArrayMesh" id=74]
+[ext_resource path="res://models/ID452.mesh" type="ArrayMesh" id=75]
+[ext_resource path="res://models/ID754.mesh" type="ArrayMesh" id=76]
+[ext_resource path="res://models/ID896.mesh" type="ArrayMesh" id=77]
+[ext_resource path="res://models/ID870.mesh" type="ArrayMesh" id=78]
+[ext_resource path="res://models/ID694.mesh" type="ArrayMesh" id=79]
+[ext_resource path="res://models/ID956.mesh" type="ArrayMesh" id=80]
+[ext_resource path="res://models/ID946.mesh" type="ArrayMesh" id=81]
+[ext_resource path="res://models/ID259.mesh" type="ArrayMesh" id=82]
+[ext_resource path="res://models/ID813.mesh" type="ArrayMesh" id=83]
+[ext_resource path="res://models/ID926.mesh" type="ArrayMesh" id=84]
+[ext_resource path="res://models/ID196.mesh" type="ArrayMesh" id=85]
+[ext_resource path="res://models/ID416.mesh" type="ArrayMesh" id=86]
+[ext_resource path="res://models/ID614.mesh" type="ArrayMesh" id=87]
+[ext_resource path="res://models/ID494.mesh" type="ArrayMesh" id=88]
+[ext_resource path="res://models/ID976.mesh" type="ArrayMesh" id=89]
+[ext_resource path="res://models/ID704.mesh" type="ArrayMesh" id=90]
+[ext_resource path="res://models/ID664.mesh" type="ArrayMesh" id=91]
+[ext_resource path="res://models/ID734.mesh" type="ArrayMesh" id=92]
+[ext_resource path="res://models/ID328.mesh" type="ArrayMesh" id=93]
+[ext_resource path="res://models/ID1006.mesh" type="ArrayMesh" id=94]
+[ext_resource path="res://models/ID724.mesh" type="ArrayMesh" id=95]
+[ext_resource path="res://models/ID544.mesh" type="ArrayMesh" id=96]
+[ext_resource path="res://models/ID441.mesh" type="ArrayMesh" id=97]
+[ext_resource path="res://models/ID1016.mesh" type="ArrayMesh" id=98]
+
+[node name="crane_mesh" type="Spatial"]
+
+[node name="SketchUp" type="Spatial" parent="."]
+transform = Transform( 0.0254, 0, 0, 0, 0.0254, 0, 0, 0, 0.0254, 0, 0, 0 )
+
+[node name="Tire_-_Cable" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -864.448, 333.654, -10.1184 )
+mesh = ExtResource( 38 )
+material/0 = null
+material/1 = null
+
+[node name="Tire_-_Cable001" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -864.448, 333.654, -10.1184 )
+mesh = ExtResource( 18 )
+material/0 = null
+material/1 = null
+
+[node name="Red_Outrigger_Pads" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.6467, 0, 194.175 )
+mesh = ExtResource( 62 )
+material/0 = null
+
+[node name="ID1046" type="MeshInstance" parent="SketchUp/Red_Outrigger_Pads"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1044.79, 1206.81, -1292.69 )
+mesh = ExtResource( 63 )
+
+[node name="Red_Outrigger_Pads001" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.6467, 0, 194.175 )
+mesh = ExtResource( 16 )
+material/0 = null
+
+[node name="Red_Outrigger_Pads002" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.6467, 0, 194.175 )
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="Red_Outrigger_Pads003" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.6467, 0, 194.175 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="Frame_-_Hook" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -877.636, 296.762, -8.99344 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="Frame_-_Hook001" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -877.636, 296.762, -8.99344 )
+mesh = ExtResource( 13 )
+material/0 = null
+
+[node name="Outrigger_Cylinder" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.7569, 2, 183.065 )
+mesh = ExtResource( 14 )
+material/0 = null
+material/1 = null
+
+[node name="Outrigger_Cylinder001" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.7569, 2, 183.065 )
+mesh = ExtResource( 17 )
+material/0 = null
+material/1 = null
+
+[node name="Outrigger_Cylinder002" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.7569, 2, 183.065 )
+mesh = ExtResource( 21 )
+material/0 = null
+
+[node name="Outrigger_Cylinder003" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.7569, 2, 183.065 )
+mesh = ExtResource( 23 )
+material/0 = null
+material/1 = null
+
+[node name="Outrigger_Cylinder004" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.7569, 2, 183.065 )
+mesh = ExtResource( 11 )
+material/0 = null
+
+[node name="Outrigger_Cylinder005" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.7569, 2, 183.065 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="Outrigger_Cylinder006" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.7569, 2, 183.065 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+
+[node name="Outrigger_Cylinder007" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.7569, 2, 183.065 )
+mesh = ExtResource( 30 )
+material/0 = null
+
+[node name="Frame_-_Top_Pully_s" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -861.784, 837.865, 8.3941 )
+mesh = ExtResource( 85 )
+material/0 = null
+material/1 = null
+
+[node name="Frame_-_Top_Pully_s001" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -861.784, 837.865, 8.3941 )
+mesh = ExtResource( 12 )
+material/0 = null
+material/1 = null
+
+[node name="Frame_-_Top_Pully_s002" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -861.784, 837.865, 8.3941 )
+mesh = ExtResource( 7 )
+material/0 = null
+material/1 = null
+
+[node name="Frame_-_Top_Pully_s003" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -861.784, 837.865, 8.3941 )
+mesh = ExtResource( 33 )
+material/0 = null
+material/1 = null
+
+[node name="Outrigger_Main" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 42.5764, 29, 131.385 )
+mesh = ExtResource( 45 )
+material/0 = null
+
+[node name="Outrigger_Main001" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 42.5764, 29, 131.385 )
+mesh = ExtResource( 82 )
+material/0 = null
+
+[node name="Outrigger_Main002" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 42.5764, 29, 131.385 )
+mesh = ExtResource( 31 )
+material/0 = null
+
+[node name="Outrigger_Main003" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 42.5764, 29, 131.385 )
+mesh = ExtResource( 40 )
+material/0 = null
+
+[node name="Bed_Diamond_Grip_Steel" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -82.1099, 51, 72.3468 )
+mesh = ExtResource( 59 )
+material/0 = null
+material/1 = null
+
+[node name="Bed_Diamond_Grip_Steel001" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -82.1099, 51, 72.3468 )
+mesh = ExtResource( 49 )
+material/0 = null
+
+[node name="Frame_-_Lift_Shaft" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0805238, 76.9566, 8.00565 )
+mesh = ExtResource( 74 )
+material/0 = null
+material/1 = null
+
+[node name="Frame_-_Lift_Shaft001" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0805238, 76.9566, 8.00565 )
+mesh = ExtResource( 93 )
+material/0 = null
+material/1 = null
+
+[node name="Exhaust" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 389.992, 103.062, -63.1072 )
+mesh = ExtResource( 65 )
+material/0 = null
+
+[node name="Caution_Paint" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.9346, 31, 187.083 )
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="Caution_Paint001" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.9346, 31, 187.083 )
+mesh = ExtResource( 47 )
+material/0 = null
+
+[node name="Caution_Paint002" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.9346, 31, 187.083 )
+mesh = ExtResource( 9 )
+material/0 = null
+
+[node name="Caution_Paint003" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.9346, 31, 187.083 )
+mesh = ExtResource( 50 )
+material/0 = null
+
+[node name="Exhaust_Main" type="MeshInstance" parent="SketchUp"]
+transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 4.56724, 102.312, 50.3434 )
+mesh = ExtResource( 60 )
+material/0 = null
+
+[node name="Outrigger_-_Broom" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -82.1099, 29, 72.8468 )
+mesh = ExtResource( 86 )
+material/0 = null
+material/1 = null
+
+[node name="Outrigger_-_Broom001" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -82.1099, 29, 72.8468 )
+mesh = ExtResource( 46 )
+material/0 = null
+material/1 = null
+
+[node name="Outrigger_-_Broom002" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -82.1099, 29, 72.8468 )
+mesh = ExtResource( 97 )
+material/0 = null
+material/1 = null
+
+[node name="Tire" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2195, 0, 72.3468 )
+mesh = ExtResource( 75 )
+material/0 = null
+material/1 = null
+
+[node name="Tire001" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2195, 0, 72.3468 )
+mesh = ExtResource( 58 )
+material/0 = null
+material/1 = null
+
+[node name="Tire002" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2195, 0, 72.3468 )
+mesh = ExtResource( 35 )
+material/0 = null
+material/1 = null
+
+[node name="Tire003" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2195, 0, 72.3468 )
+mesh = ExtResource( 88 )
+material/0 = null
+material/1 = null
+
+[node name="Tire004" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2195, 0, 72.3468 )
+mesh = ExtResource( 53 )
+material/0 = null
+material/1 = null
+
+[node name="Tire005" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2195, 0, 72.3468 )
+mesh = ExtResource( 29 )
+material/0 = null
+material/1 = null
+
+[node name="Tire006" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2195, 0, 72.3468 )
+mesh = ExtResource( 73 )
+material/0 = null
+material/1 = null
+
+[node name="Tire007" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2195, 0, 72.3468 )
+mesh = ExtResource( 19 )
+material/0 = null
+material/1 = null
+
+[node name="Tire008" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2195, 0, 72.3468 )
+mesh = ExtResource( 96 )
+material/0 = null
+material/1 = null
+
+[node name="Tire009" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2195, 0, 72.3468 )
+mesh = ExtResource( 52 )
+material/0 = null
+material/1 = null
+
+[node name="Tire010" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2195, 0, 72.3468 )
+mesh = ExtResource( 42 )
+material/0 = null
+material/1 = null
+
+[node name="Tire011" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2195, 0, 72.3468 )
+mesh = ExtResource( 34 )
+material/0 = null
+material/1 = null
+
+[node name="Tire012" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2195, 0, 72.3468 )
+mesh = ExtResource( 26 )
+material/0 = null
+material/1 = null
+
+[node name="Tire013" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2195, 0, 72.3468 )
+mesh = ExtResource( 48 )
+material/0 = null
+material/1 = null
+
+[node name="Tire014" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2195, 0, 72.3468 )
+mesh = ExtResource( 64 )
+material/0 = null
+material/1 = null
+
+[node name="Tire015" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2195, 0, 72.3468 )
+mesh = ExtResource( 87 )
+material/0 = null
+material/1 = null
+
+[node name="Tire016" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2195, 0, 72.3468 )
+mesh = ExtResource( 44 )
+material/0 = null
+material/1 = null
+
+[node name="Tire017" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2195, 0, 72.3468 )
+mesh = ExtResource( 56 )
+material/0 = null
+material/1 = null
+
+[node name="Tire018" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2195, 0, 72.3468 )
+mesh = ExtResource( 27 )
+material/0 = null
+material/1 = null
+
+[node name="Tire019" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2195, 0, 72.3468 )
+mesh = ExtResource( 25 )
+material/0 = null
+material/1 = null
+
+[node name="Tire020" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2195, 0, 72.3468 )
+mesh = ExtResource( 91 )
+material/0 = null
+material/1 = null
+
+[node name="Tire021" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2195, 0, 72.3468 )
+mesh = ExtResource( 66 )
+material/0 = null
+material/1 = null
+
+[node name="Tire022" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2195, 0, 72.3468 )
+mesh = ExtResource( 28 )
+material/0 = null
+material/1 = null
+
+[node name="Tire023" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2195, 0, 72.3468 )
+mesh = ExtResource( 79 )
+material/0 = null
+material/1 = null
+
+[node name="Tire024" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2195, 0, 72.3468 )
+mesh = ExtResource( 90 )
+material/0 = null
+material/1 = null
+
+[node name="Tire025" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2195, 0, 72.3468 )
+mesh = ExtResource( 37 )
+material/0 = null
+material/1 = null
+
+[node name="Tire026" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2195, 0, 72.3468 )
+mesh = ExtResource( 95 )
+material/0 = null
+material/1 = null
+
+[node name="Tire027" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2195, 0, 72.3468 )
+mesh = ExtResource( 92 )
+material/0 = null
+material/1 = null
+
+[node name="Tire028" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2195, 0, 72.3468 )
+mesh = ExtResource( 68 )
+material/0 = null
+material/1 = null
+
+[node name="Tire029" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2195, 0, 72.3468 )
+mesh = ExtResource( 76 )
+material/0 = null
+material/1 = null
+
+[node name="Tire030" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2195, 0, 72.3468 )
+mesh = ExtResource( 24 )
+material/0 = null
+material/1 = null
+
+[node name="Tire031" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2195, 0, 72.3468 )
+mesh = ExtResource( 54 )
+material/0 = null
+material/1 = null
+
+[node name="Seat" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -137.354, 20.3582, 68.7017 )
+mesh = ExtResource( 43 )
+material/0 = null
+
+[node name="Seat001" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -137.354, 20.3582, 68.7017 )
+mesh = ExtResource( 72 )
+material/0 = null
+
+[node name="Glass" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -158.503, 54.163, 72.3226 )
+mesh = ExtResource( 83 )
+material/0 = null
+
+[node name="Glass001" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -158.503, 54.163, 72.3226 )
+mesh = ExtResource( 69 )
+material/0 = null
+
+[node name="Glass002" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -158.503, 54.163, 72.3226 )
+mesh = ExtResource( 71 )
+material/0 = null
+
+[node name="Glass003" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -158.503, 54.163, 72.3226 )
+mesh = ExtResource( 22 )
+material/0 = null
+
+[node name="Glass004" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -158.503, 54.163, 72.3226 )
+mesh = ExtResource( 32 )
+material/0 = null
+
+[node name="Glass005" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -158.503, 54.163, 72.3226 )
+mesh = ExtResource( 78 )
+material/0 = null
+
+[node name="Body" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -878.659, 20.1161, 72.3468 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="Body001" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -878.659, 20.1161, 72.3468 )
+mesh = ExtResource( 77 )
+material/0 = null
+
+[node name="Body002" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -878.659, 20.1161, 72.3468 )
+mesh = ExtResource( 51 )
+material/0 = null
+
+[node name="Body003" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -878.659, 20.1161, 72.3468 )
+mesh = ExtResource( 57 )
+material/0 = null
+
+[node name="Body004" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -878.659, 20.1161, 72.3468 )
+mesh = ExtResource( 84 )
+material/0 = null
+
+[node name="Body005" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -878.659, 20.1161, 72.3468 )
+mesh = ExtResource( 70 )
+material/0 = null
+
+[node name="Body006" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -878.659, 20.1161, 72.3468 )
+mesh = ExtResource( 81 )
+material/0 = null
+
+[node name="Body007" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -878.659, 20.1161, 72.3468 )
+mesh = ExtResource( 80 )
+material/0 = null
+
+[node name="Body008" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -878.659, 20.1161, 72.3468 )
+mesh = ExtResource( 41 )
+material/0 = null
+
+[node name="Body009" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -878.659, 20.1161, 72.3468 )
+mesh = ExtResource( 89 )
+material/0 = null
+
+[node name="Body010" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -878.659, 20.1161, 72.3468 )
+mesh = ExtResource( 20 )
+material/0 = null
+
+[node name="Body011" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -878.659, 20.1161, 72.3468 )
+mesh = ExtResource( 67 )
+material/0 = null
+
+[node name="Body012" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -878.659, 20.1161, 72.3468 )
+mesh = ExtResource( 94 )
+material/0 = null
+
+[node name="Body013" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -878.659, 20.1161, 72.3468 )
+mesh = ExtResource( 98 )
+material/0 = null
+
+[node name="Body014" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -878.659, 20.1161, 72.3468 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="Body015" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -878.659, 20.1161, 72.3468 )
+mesh = ExtResource( 10 )
+material/0 = null
+
+[node name="Body016" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -878.659, 20.1161, 72.3468 )
+mesh = ExtResource( 63 )
+
+[node name="Body017" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -878.659, 20.1161, 72.3468 )
+mesh = ExtResource( 39 )
+
+[node name="Body018" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -878.659, 20.1161, 72.3468 )
+mesh = ExtResource( 61 )
+
+[node name="Body019" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -878.659, 20.1161, 72.3468 )
+mesh = ExtResource( 36 )
+
+[node name="Body020" type="MeshInstance" parent="SketchUp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -878.659, 20.1161, 72.3468 )
+mesh = ExtResource( 55 )

@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/cockpit.obj-1d85d5e15ac8404091aeedca0e49f844.mesh"
+
+[deps]
+
+files=[ "res://.import/cockpit.obj-1d85d5e15ac8404091aeedca0e49f844.mesh" ]
+
+source_file="res://models/blender_export/cockpit.obj"
+dest_files=[ "res://.import/cockpit.obj-1d85d5e15ac8404091aeedca0e49f844.mesh", "res://.import/cockpit.obj-1d85d5e15ac8404091aeedca0e49f844.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.06, 0.06, 0.06 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
