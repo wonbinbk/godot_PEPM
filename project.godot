@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Test"
+config/name="PEPM"
 run/main_scene="res://main_scene.tscn"
 config/icon="res://icon.png"
 
