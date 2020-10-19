@@ -1,0 +1,620 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://models/blender_export/crane_wheel.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://crane/scripts/base_VehicleBody.gd" type="Script" id=2]
+[ext_resource path="res://models/blender_export/crane_boom02.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://models/blender_export/crane_boom03.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://models/blender_export/crane_boom01.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://models/blender_export/cockpit.obj" type="ArrayMesh" id=6]
+[ext_resource path="res://models/blender_export/crane_base.obj" type="ArrayMesh" id=7]
+[ext_resource path="res://models/Tire_4.material" type="Material" id=8]
+[ext_resource path="res://crane/boom_6DOF.gd" type="Script" id=9]
+[ext_resource path="res://crane/boom.gd" type="Script" id=10]
+[ext_resource path="res://crane/Generic6DOFJoint.gd" type="Script" id=11]
+[ext_resource path="res://crane/HingeJoint.gd" type="Script" id=12]
+[ext_resource path="res://models/Caution_Paint.material" type="Material" id=13]
+[ext_resource path="res://models/ID92.mesh" type="ArrayMesh" id=14]
+[ext_resource path="res://models/Rim.material" type="Material" id=15]
+[ext_resource path="res://models/red_Outrigger_Base.material" type="Material" id=16]
+[ext_resource path="res://models/Translucent_Glass_Tinted.material" type="Material" id=17]
+[ext_resource path="res://models/Bed_Diamond_Grip_Steel.material" type="Material" id=18]
+[ext_resource path="res://models/Exhaust.material" type="Material" id=19]
+[ext_resource path="res://models/Frame_2.material" type="Material" id=20]
+[ext_resource path="res://crane/joint-rope-hook.gd" type="Script" id=21]
+
+[sub_resource type="CylinderShape" id=1]
+radius = 2.61492
+height = 1.0618
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 6.78386, 0.632331, 0.483917 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 5.6, 0.54749, 0.445701 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 6.00467, 0.492764, 0.391852 )
+
+[sub_resource type="CylinderMesh" id=5]
+top_radius = 0.05
+bottom_radius = 0.05
+height = 0.1
+
+[sub_resource type="CylinderShape" id=6]
+radius = 0.05
+height = 0.1
+
+[sub_resource type="SphereShape" id=7]
+radius = 0.2
+
+[sub_resource type="ConvexPolygonShape" id=8]
+points = PoolVector3Array( -0.191099, 2.67477, 1.24757, -0.191099, 2.67477, 1.56227, -0.191099, 3.06803, 1.24757, -0.191099, 3.06803, 2.11289, -0.191099, 3.38276, 1.56227, -0.191099, 3.38276, 2.11289, -0.112419, 2.9895, 2.11289, 0.044911, 2.67477, 1.64097, 0.044911, 3.14669, 1.24757, 0.12356, 2.67477, 1.24757, 0.12356, 3.06803, 2.11289, 0.12356, 3.38276, 1.56227, 0.12356, 3.38276, 2.11289 )
+
+[sub_resource type="BoxShape" id=9]
+extents = Vector3( 5.29071, 0.378646, 2 )
+
+[sub_resource type="BoxShape" id=10]
+extents = Vector3( 2.40658, 1.13602, 2.01739 )
+
+[node name="Crane" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.54892, 0 )
+
+[node name="crain" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -0.2 )
+script = ExtResource( 10 )
+
+[node name="cabin_rigidbody" type="RigidBody" parent="crain"]
+transform = Transform( 1, 1.42109e-14, 1.7683e-07, 0, 1, -4.37114e-08, -1.7683e-07, 4.37114e-08, 1, 0, 0, 0 )
+mass = 600.0
+continuous_cd = true
+script = ExtResource( 10 )
+
+[node name="MeshInstance" type="MeshInstance" parent="crain/cabin_rigidbody"]
+mesh = ExtResource( 6 )
+material/0 = ExtResource( 16 )
+
+[node name="CollisionShape" type="CollisionShape" parent="crain/cabin_rigidbody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.178879, 0.807402, 0 )
+shape = SubResource( 1 )
+
+[node name="Generic6DOFJoint" type="Generic6DOFJoint" parent="crain/cabin_rigidbody"]
+transform = Transform( 1, 1.7683e-07, 1.7683e-07, -1.7683e-07, -4.37114e-08, 1, 1.7683e-07, -1, -4.37114e-08, 0, -8.88178e-16, -1.49012e-08 )
+nodes/node_a = NodePath("../../../truck/base_VehicleBody")
+nodes/node_b = NodePath("..")
+solver/priority = 3
+angular_limit_z/enabled = false
+angular_motor_z/enabled = true
+angular_motor_z/force_limit = 30000.0
+script = ExtResource( 11 )
+
+[node name="boom" type="Spatial" parent="crain/cabin_rigidbody"]
+transform = Transform( 0.866025, 0.5, -1.7683e-07, -0.5, 0.866025, 4.37114e-08, 1.74995e-07, 5.05598e-08, 1, -4.16185, 5.38493, -0.0196276 )
+script = ExtResource( 10 )
+
+[node name="HingeJoint" type="HingeJoint" parent="crain/cabin_rigidbody/boom"]
+transform = Transform( 1, 0, -2.27374e-13, 0, 1, -1.59872e-14, 0, 5.68434e-14, 1, 6.53327, -0.0166588, 0 )
+nodes/node_a = NodePath("../..")
+nodes/node_b = NodePath("../boom01")
+solver/priority = 2
+angular_limit/enable = true
+angular_limit/lower = -28.3
+angular_limit/softness = 16.0
+angular_limit/relaxation = 16.0
+motor/enable = true
+motor/target_velocity = 0.0
+motor/max_impulse = 1024.0
+script = ExtResource( 12 )
+
+[node name="HingeJoint2" type="HingeJoint" parent="crain/cabin_rigidbody/boom"]
+transform = Transform( 1, 0, -2.27374e-13, 0, 1, -1.59872e-14, 0, 5.68434e-14, 1, 6.53327, -0.0166588, 0 )
+nodes/node_a = NodePath("../..")
+nodes/node_b = NodePath("../boom01")
+solver/priority = 2
+angular_limit/enable = true
+angular_limit/lower = -28.3
+angular_limit/softness = 16.0
+angular_limit/relaxation = 16.0
+motor/enable = true
+motor/target_velocity = 0.0
+motor/max_impulse = 1024.0
+script = ExtResource( 12 )
+
+[node name="HingeJoint3" type="HingeJoint" parent="crain/cabin_rigidbody/boom"]
+transform = Transform( 1, 0, -2.27374e-13, 0, 1, -1.59872e-14, 0, 5.68434e-14, 1, 6.53327, -0.0166588, 0 )
+nodes/node_a = NodePath("../..")
+nodes/node_b = NodePath("../boom01")
+solver/priority = 2
+angular_limit/enable = true
+angular_limit/lower = -28.3
+angular_limit/softness = 16.0
+angular_limit/relaxation = 16.0
+motor/enable = true
+motor/target_velocity = 0.0
+motor/max_impulse = 1024.0
+script = ExtResource( 12 )
+
+[node name="HingeJoint4" type="HingeJoint" parent="crain/cabin_rigidbody/boom"]
+transform = Transform( 1, 0, -2.27374e-13, 0, 1, -1.59872e-14, 0, 5.68434e-14, 1, 6.53327, -0.0166588, 0 )
+nodes/node_a = NodePath("../..")
+nodes/node_b = NodePath("../boom01")
+solver/priority = 2
+angular_limit/enable = true
+angular_limit/lower = -28.3
+angular_limit/softness = 16.0
+angular_limit/relaxation = 16.0
+motor/enable = true
+motor/target_velocity = 0.0
+motor/max_impulse = 1024.0
+script = ExtResource( 12 )
+
+[node name="HingeJoint5" type="HingeJoint" parent="crain/cabin_rigidbody/boom"]
+transform = Transform( 1, 0, -2.27374e-13, 0, 1, -1.59872e-14, 0, 5.68434e-14, 1, 6.53327, -0.0166588, 0 )
+nodes/node_a = NodePath("../..")
+nodes/node_b = NodePath("../boom01")
+solver/priority = 2
+angular_limit/enable = true
+angular_limit/lower = -28.3
+angular_limit/softness = 16.0
+angular_limit/relaxation = 16.0
+motor/enable = true
+motor/target_velocity = 0.0
+motor/max_impulse = 1024.0
+script = ExtResource( 12 )
+
+[node name="boom01" type="RigidBody" parent="crain/cabin_rigidbody/boom"]
+mass = 154.45
+continuous_cd = true
+script = ExtResource( 10 )
+
+[node name="CollisionShape" type="CollisionShape" parent="crain/cabin_rigidbody/boom/boom01"]
+transform = Transform( 0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance" type="MeshInstance" parent="crain/cabin_rigidbody/boom/boom01/CollisionShape"]
+transform = Transform( 0.848705, -0.49, -5.0116e-14, 0.49, 0.848705, -2.68834e-14, -2.84217e-14, 1.06581e-14, 0.98, -0.71124, -8.1723, 0.253374 )
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 13 )
+material/1 = ExtResource( 13 )
+material/2 = ExtResource( 15 )
+material/3 = ExtResource( 20 )
+material/4 = ExtResource( 20 )
+material/5 = ExtResource( 15 )
+
+[node name="boom1-2" type="Generic6DOFJoint" parent="crain/cabin_rigidbody/boom/boom01"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.41197, -0.0918899, -0.0282091 )
+nodes/node_a = NodePath("..")
+nodes/node_b = NodePath("../../boom02")
+linear_limit_x/lower_distance = -1.0
+linear_motor_x/enabled = true
+linear_motor_x/target_velocity = 1.0
+linear_motor_x/force_limit = 10000.0
+script = ExtResource( 9 )
+LOWER_LIMIT = -10
+
+[node name="boom02" type="RigidBody" parent="crain/cabin_rigidbody/boom"]
+transform = Transform( 0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 1, -1.4, 0, 0 )
+collision_layer = 2
+collision_mask = 2
+mass = 115.8
+continuous_cd = true
+can_sleep = false
+script = ExtResource( 10 )
+
+[node name="CollisionShape" type="CollisionShape" parent="crain/cabin_rigidbody/boom/boom02"]
+shape = SubResource( 3 )
+
+[node name="MeshInstance" type="MeshInstance" parent="crain/cabin_rigidbody/boom/boom02/CollisionShape"]
+transform = Transform( 0.848705, -0.49, 0, 0.49, 0.848705, 0, 0, 0, 0.98, 11.6796, -8.16568, 0.258893 )
+mesh = ExtResource( 3 )
+material/0 = ExtResource( 15 )
+
+[node name="boom2-3" type="Generic6DOFJoint" parent="crain/cabin_rigidbody/boom/boom02"]
+transform = Transform( 0.999999, 3.57628e-07, -5.68433e-14, -3.57628e-07, 0.999999, 2.84217e-14, 2.84216e-14, -2.71051e-20, 1, 4.97561, -0.0879049, 0.00813062 )
+nodes/node_a = NodePath("..")
+nodes/node_b = NodePath("../../boom03")
+linear_motor_x/enabled = true
+linear_motor_x/target_velocity = 1.0
+linear_motor_x/force_limit = 10000.0
+script = ExtResource( 9 )
+
+[node name="boom03" type="RigidBody" parent="crain/cabin_rigidbody/boom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0 )
+collision_layer = 2
+collision_mask = 2
+mass = 115.8
+continuous_cd = true
+can_sleep = false
+script = ExtResource( 10 )
+
+[node name="CollisionShape" type="CollisionShape" parent="crain/cabin_rigidbody/boom/boom03"]
+transform = Transform( 0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 1.06873, 0, -0.0117264 )
+shape = SubResource( 4 )
+
+[node name="MeshInstance" type="MeshInstance" parent="crain/cabin_rigidbody/boom/boom03/CollisionShape"]
+transform = Transform( 0.866025, -0.5, -2.08616e-07, 0.5, 0.866025, 7.45055e-09, 1.2771e-08, -3.74845e-08, 1, 23.656, -8.335, 0.255 )
+mesh = ExtResource( 4 )
+material/0 = ExtResource( 15 )
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+
+[node name="Generic6DOFJoint" type="Generic6DOFJoint" parent="crain/cabin_rigidbody/boom/boom03"]
+transform = Transform( 1, 0, 0, 0, 1, 0, -6.77626e-21, 1.21973e-19, 1, -5.04217, -0.565633, 0 )
+nodes/node_a = NodePath("..")
+nodes/node_b = NodePath("../../rope")
+angular_limit_x/upper_angle = 1.0
+angular_limit_x/lower_angle = -1.0
+angular_limit_x/softness = 10.0
+angular_limit_x/damping = 16.0
+angular_limit_y/upper_angle = 1.0
+angular_limit_y/lower_angle = -1.0
+angular_limit_y/softness = 10.0
+angular_limit_y/damping = 16.0
+angular_limit_z/upper_angle = 1.0
+angular_limit_z/lower_angle = -1.0
+angular_limit_z/softness = 10.0
+angular_limit_z/damping = 16.0
+
+[node name="rope" type="RigidBody" parent="crain/cabin_rigidbody/boom"]
+transform = Transform( 0.999742, 0.0228092, 0, -0.0228092, 0.999742, 0, -7.8461e-16, -2.27806e-15, 1, -7.44655, -1.75217, -0.0247927 )
+mass = 20.0
+
+[node name="MeshInstance" type="MeshInstance" parent="crain/cabin_rigidbody/boom/rope"]
+transform = Transform( 0.844739, -0.535178, 0, 0.535178, 0.844739, 0, 3.4458e-14, 4.77215e-14, 1, -0.523675, 1.13478, 0 )
+visible = false
+mesh = SubResource( 5 )
+material/0 = ExtResource( 15 )
+
+[node name="CollisionShape" type="CollisionShape" parent="crain/cabin_rigidbody/boom/rope"]
+transform = Transform( 0.84458, -0.535429, 0, 0.535429, 0.84458, 0, 3.44828e-14, 4.77408e-14, 1, -0.527017, 1.12381, 0 )
+shape = SubResource( 6 )
+
+[node name="joint-rope-hook" type="SliderJoint" parent="crain/cabin_rigidbody/boom/rope"]
+transform = Transform( 0.513421, 0.858136, 0, -0.858136, 0.513421, 0, 1.79158e-14, -1.02651e-13, 1, -0.513468, 1.20391, 0 )
+nodes/node_a = NodePath("..")
+nodes/node_b = NodePath("../../hook")
+linear_limit/upper_distance = 0.0
+linear_limit/lower_distance = -0.5
+linear_motion/softness = 0.1
+script = ExtResource( 21 )
+
+[node name="hook" type="RigidBody" parent="crain/cabin_rigidbody/boom"]
+transform = Transform( 0.871549, -0.490311, 0, 0.490311, 0.871549, 0, 3.01972e-14, 4.42108e-14, 1, -6.59058, -3.17325, -0.0222244 )
+mass = 10.0
+
+[node name="MeshInstance" type="MeshInstance" parent="crain/cabin_rigidbody/boom/hook"]
+transform = Transform( -0.02, -1.45519e-11, -7.78829e-09, -1.45519e-11, 0.02, -4.74151e-18, 7.78829e-09, 9.25221e-19, -0.02, 0.290511, 0.00324011, 0.012007 )
+mesh = ExtResource( 14 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="crain/cabin_rigidbody/boom/hook"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.140115, 0.170579, 0 )
+shape = SubResource( 7 )
+
+[node name="truck" type="Spatial" parent="."]
+script = ExtResource( 10 )
+
+[node name="base_VehicleBody" type="VehicleBody" parent="truck"]
+collision_layer = 3
+collision_mask = 3
+mass = 10000.0
+continuous_cd = true
+script = ExtResource( 2 )
+
+[node name="MeshInstance" type="MeshInstance" parent="truck/base_VehicleBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4, -1.2, 0 )
+mesh = ExtResource( 7 )
+material/0 = null
+material/1 = ExtResource( 18 )
+material/2 = ExtResource( 18 )
+material/3 = ExtResource( 15 )
+material/4 = ExtResource( 15 )
+material/5 = ExtResource( 15 )
+material/6 = ExtResource( 15 )
+material/7 = ExtResource( 19 )
+material/8 = ExtResource( 17 )
+material/9 = ExtResource( 17 )
+material/10 = ExtResource( 17 )
+material/11 = ExtResource( 13 )
+material/12 = ExtResource( 13 )
+material/13 = ExtResource( 13 )
+material/14 = ExtResource( 13 )
+material/15 = ExtResource( 13 )
+material/16 = ExtResource( 13 )
+material/17 = null
+
+[node name="CollisionShape6" type="CollisionShape" parent="truck/base_VehicleBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4, -1.2, 0 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape" type="CollisionShape" parent="truck/base_VehicleBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.30466, -0.17702, -0.167476 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="truck/base_VehicleBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.10321, 0.25514, -0.144962 )
+shape = SubResource( 10 )
+
+[node name="VehicleWheel1" type="VehicleWheel" parent="truck/base_VehicleBody"]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -5.20379, -0.75847, 1.20829 )
+brake = 1.0
+use_as_traction = true
+use_as_steering = true
+wheel_roll_influence = 0.0
+wheel_radius = 0.6
+wheel_friction_slip = 1.0
+suspension_stiffness = 10.0
+suspension_max_force = 60000.0
+damping_compression = 1.0
+damping_relaxation = 1.0
+
+[node name="MeshInstance" type="MeshInstance" parent="truck/base_VehicleBody/VehicleWheel1"]
+transform = Transform( -1.62921e-06, 0, -10, 0, 10, 0, 10, 0, -1.62921e-06, 0, -0.622873, 0 )
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 8 )
+material/1 = null
+material/2 = ExtResource( 8 )
+material/3 = null
+
+[node name="VehicleWheel2" type="VehicleWheel" parent="truck/base_VehicleBody"]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -5.20379, -0.75847, -1.5403 )
+brake = 1.0
+use_as_traction = true
+use_as_steering = true
+wheel_roll_influence = 0.0
+wheel_radius = 0.6
+wheel_friction_slip = 1.0
+suspension_travel = 0.1
+suspension_stiffness = 10.0
+suspension_max_force = 60000.0
+damping_compression = 1.0
+damping_relaxation = 1.0
+
+[node name="MeshInstance" type="MeshInstance" parent="truck/base_VehicleBody/VehicleWheel2"]
+transform = Transform( -1.62921e-06, 0, -10, 0, 10, 0, 10, 0, -1.62921e-06, 0, -0.622873, 0 )
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 8 )
+material/1 = null
+material/2 = ExtResource( 8 )
+material/3 = null
+
+[node name="VehicleWheel3" type="VehicleWheel" parent="truck/base_VehicleBody"]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -3.85624, -0.75847, 1.20829 )
+brake = 1.0
+use_as_traction = true
+use_as_steering = true
+wheel_roll_influence = 0.0
+wheel_radius = 0.6
+wheel_friction_slip = 1.0
+suspension_travel = 0.1
+suspension_stiffness = 10.0
+suspension_max_force = 60000.0
+damping_compression = 1.0
+damping_relaxation = 1.0
+
+[node name="MeshInstance" type="MeshInstance" parent="truck/base_VehicleBody/VehicleWheel3"]
+transform = Transform( -1.62921e-06, 0, 10, 0, 10, 0, -10, 0, -1.62921e-06, 0, -0.622873, 0 )
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 8 )
+material/1 = null
+material/2 = ExtResource( 8 )
+material/3 = null
+
+[node name="VehicleWheel4" type="VehicleWheel" parent="truck/base_VehicleBody"]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -3.85624, -0.75847, -1.5403 )
+brake = 1.0
+use_as_traction = true
+use_as_steering = true
+wheel_roll_influence = 0.0
+wheel_radius = 0.6
+wheel_friction_slip = 1.0
+suspension_travel = 0.1
+suspension_stiffness = 10.0
+suspension_max_force = 60000.0
+damping_compression = 1.0
+damping_relaxation = 1.0
+
+[node name="MeshInstance" type="MeshInstance" parent="truck/base_VehicleBody/VehicleWheel4"]
+transform = Transform( -1.62921e-06, 0, -10, 0, 10, 0, 10, 0, -1.62921e-06, 0, -0.622873, 0 )
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 8 )
+material/1 = null
+material/2 = ExtResource( 8 )
+material/3 = null
+
+[node name="VehicleWheel5" type="VehicleWheel" parent="truck/base_VehicleBody"]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 6.6513, -0.75847, 1.20829 )
+brake = 1.0
+use_as_traction = true
+wheel_roll_influence = 0.0
+wheel_radius = 0.6
+wheel_friction_slip = 1.0
+suspension_stiffness = 10.0
+suspension_max_force = 60000.0
+
+[node name="MeshInstance" type="MeshInstance" parent="truck/base_VehicleBody/VehicleWheel5"]
+transform = Transform( -1.62921e-06, 0, 10, 0, 10, 0, -10, 0, -1.62921e-06, 0, -0.622873, 0 )
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 8 )
+material/1 = null
+material/2 = ExtResource( 8 )
+material/3 = null
+
+[node name="VehicleWheel6" type="VehicleWheel" parent="truck/base_VehicleBody"]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 6.6513, -0.75847, -1.5403 )
+brake = 1.0
+use_as_traction = true
+wheel_roll_influence = 0.0
+wheel_radius = 0.6
+wheel_friction_slip = 1.0
+suspension_stiffness = 10.0
+suspension_max_force = 60000.0
+
+[node name="MeshInstance" type="MeshInstance" parent="truck/base_VehicleBody/VehicleWheel6"]
+transform = Transform( -1.62921e-06, 0, -10, 0, 10, 0, 10, 0, -1.62921e-06, 0, -0.622873, 0 )
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 8 )
+material/1 = null
+material/2 = ExtResource( 8 )
+material/3 = null
+
+[node name="VehicleWheel7" type="VehicleWheel" parent="truck/base_VehicleBody"]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 5.30617, -0.75847, 1.20829 )
+brake = 1.0
+use_as_traction = true
+wheel_roll_influence = 0.0
+wheel_radius = 0.6
+wheel_friction_slip = 1.0
+suspension_stiffness = 10.0
+suspension_max_force = 60000.0
+
+[node name="MeshInstance" type="MeshInstance" parent="truck/base_VehicleBody/VehicleWheel7"]
+transform = Transform( -1.62921e-06, 0, 10, 0, 10, 0, -10, 0, -1.62921e-06, 0, -0.622873, 0 )
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 8 )
+material/1 = null
+material/2 = ExtResource( 8 )
+material/3 = null
+
+[node name="VehicleWheel8" type="VehicleWheel" parent="truck/base_VehicleBody"]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 5.30617, -0.75847, -1.5403 )
+brake = 1.0
+use_as_traction = true
+wheel_roll_influence = 0.0
+wheel_radius = 0.6
+wheel_friction_slip = 1.0
+suspension_stiffness = 10.0
+suspension_max_force = 60000.0
+
+[node name="MeshInstance" type="MeshInstance" parent="truck/base_VehicleBody/VehicleWheel8"]
+transform = Transform( -1.62921e-06, 0, -10, 0, 10, 0, 10, 0, -1.62921e-06, 0, -0.622873, 0 )
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 8 )
+material/1 = null
+material/2 = ExtResource( 8 )
+material/3 = null
+
+[node name="VehicleWheel9" type="VehicleWheel" parent="truck/base_VehicleBody"]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 0.62073, -0.75847, 1.20829 )
+brake = 1.0
+use_as_traction = true
+wheel_roll_influence = 0.0
+wheel_radius = 0.6
+wheel_friction_slip = 1.0
+suspension_stiffness = 10.0
+suspension_max_force = 60000.0
+
+[node name="MeshInstance" type="MeshInstance" parent="truck/base_VehicleBody/VehicleWheel9"]
+transform = Transform( -1.62921e-06, 0, 10, 0, 10, 0, -10, 0, -1.62921e-06, 0, -0.622873, 0 )
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 8 )
+material/1 = null
+material/2 = ExtResource( 8 )
+material/3 = null
+
+[node name="VehicleWheel10" type="VehicleWheel" parent="truck/base_VehicleBody"]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 0.62073, -0.75847, -1.5403 )
+brake = 1.0
+use_as_traction = true
+wheel_roll_influence = 0.0
+wheel_radius = 0.6
+wheel_friction_slip = 1.0
+suspension_stiffness = 10.0
+suspension_max_force = 60000.0
+
+[node name="MeshInstance" type="MeshInstance" parent="truck/base_VehicleBody/VehicleWheel10"]
+transform = Transform( -1.62921e-06, 0, -10, 0, 10, 0, 10, 0, -1.62921e-06, 0, -0.622873, 0 )
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 8 )
+material/1 = null
+material/2 = ExtResource( 8 )
+material/3 = null
+
+[node name="VehicleWheel11" type="VehicleWheel" parent="truck/base_VehicleBody"]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -0.69764, -0.75847, 1.20829 )
+brake = 1.0
+use_as_traction = true
+wheel_roll_influence = 0.0
+wheel_radius = 0.6
+wheel_friction_slip = 1.0
+suspension_stiffness = 10.0
+suspension_max_force = 60000.0
+
+[node name="MeshInstance" type="MeshInstance" parent="truck/base_VehicleBody/VehicleWheel11"]
+transform = Transform( -1.62921e-06, 0, 10, 0, 10, 0, -10, 0, -1.62921e-06, 0, -0.622873, 0 )
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 8 )
+material/1 = null
+material/2 = ExtResource( 8 )
+material/3 = null
+
+[node name="VehicleWheel12" type="VehicleWheel" parent="truck/base_VehicleBody"]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -0.69764, -0.75847, -1.5403 )
+brake = 1.0
+use_as_traction = true
+wheel_roll_influence = 0.0
+wheel_radius = 0.6
+wheel_friction_slip = 1.0
+suspension_stiffness = 10.0
+suspension_max_force = 60000.0
+
+[node name="MeshInstance" type="MeshInstance" parent="truck/base_VehicleBody/VehicleWheel12"]
+transform = Transform( -1.62921e-06, 0, -10, 0, 10, 0, 10, 0, -1.62921e-06, 0, -0.622873, 0 )
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 8 )
+material/1 = null
+material/2 = ExtResource( 8 )
+material/3 = null
+
+[node name="VehicleWheel13" type="VehicleWheel" parent="truck/base_VehicleBody"]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 1.92604, -0.75847, 1.20829 )
+brake = 1.0
+use_as_traction = true
+wheel_roll_influence = 0.0
+wheel_radius = 0.6
+wheel_friction_slip = 1.0
+suspension_stiffness = 10.0
+suspension_max_force = 60000.0
+
+[node name="MeshInstance" type="MeshInstance" parent="truck/base_VehicleBody/VehicleWheel13"]
+transform = Transform( -1.62921e-06, 0, 10, 0, 10, 0, -10, 0, -1.62921e-06, 0, -0.622873, 0 )
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 8 )
+material/1 = null
+material/2 = ExtResource( 8 )
+material/3 = null
+
+[node name="VehicleWheel14" type="VehicleWheel" parent="truck/base_VehicleBody"]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 1.92604, -0.75847, -1.5403 )
+brake = 1.0
+use_as_traction = true
+wheel_roll_influence = 0.0
+wheel_radius = 0.6
+wheel_friction_slip = 1.0
+suspension_stiffness = 10.0
+suspension_max_force = 60000.0
+
+[node name="MeshInstance" type="MeshInstance" parent="truck/base_VehicleBody/VehicleWheel14"]
+transform = Transform( -1.62921e-06, 0, -10, 0, 10, 0, 10, 0, -1.62921e-06, 0, -0.622873, 0 )
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 8 )
+material/1 = null
+material/2 = ExtResource( 8 )
+material/3 = null
+
+[node name="Camera_track" type="Spatial" parent="truck/base_VehicleBody"]
+transform = Transform( -0.999242, 0, 0.0389282, 0.000870958, 0.99975, 0.0223569, -0.0389184, 0.0223734, -0.998992, -0.222717, 5.47649, -28.9347 )
+
+[node name="InterpolatedCamera" type="InterpolatedCamera" parent="truck/base_VehicleBody/Camera_track"]
+transform = Transform( 1, 0.000873864, 5.76116e-05, -0.000875705, 0.998511, 0.0545489, -9.84594e-06, -0.054549, 0.998511, 0.35556, 0.552046, 4.69554 )
+keep_aspect = 0
+doppler_tracking = 2
+current = true
+target = NodePath("..")
+speed = 0.5
+enabled = true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Column C2-P1.obj-c2085afee203cfa316a4fb227b66609b.mesh"
+
+[deps]
+
+files=[ "res://.import/Column C2-P1.obj-c2085afee203cfa316a4fb227b66609b.mesh" ]
+
+source_file="res://robust/Column C2-P1.obj"
+dest_files=[ "res://.import/Column C2-P1.obj-c2085afee203cfa316a4fb227b66609b.mesh", "res://.import/Column C2-P1.obj-c2085afee203cfa316a4fb227b66609b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

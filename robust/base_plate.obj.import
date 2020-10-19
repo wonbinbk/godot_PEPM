@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/base_plate.obj-49cd2587e8dfe8047522aeeacfdae0b3.mesh"
+
+[deps]
+
+files=[ "res://.import/base_plate.obj-49cd2587e8dfe8047522aeeacfdae0b3.mesh" ]
+
+source_file="res://robust/base_plate.obj"
+dest_files=[ "res://.import/base_plate.obj-49cd2587e8dfe8047522aeeacfdae0b3.mesh", "res://.import/base_plate.obj-49cd2587e8dfe8047522aeeacfdae0b3.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/crane_wheel.obj-c02e4dd71306fe34b0733005007d3e71.mesh"
+
+[deps]
+
+files=[ "res://.import/crane_wheel.obj-c02e4dd71306fe34b0733005007d3e71.mesh" ]
+
+source_file="res://models/blender_export/crane_wheel.obj"
+dest_files=[ "res://.import/crane_wheel.obj-c02e4dd71306fe34b0733005007d3e71.mesh", "res://.import/crane_wheel.obj-c02e4dd71306fe34b0733005007d3e71.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
